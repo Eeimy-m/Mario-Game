@@ -1,3 +1,5 @@
+package Game;
+
 class Big implements MarioState {
     private MarioGame marioGame;
 

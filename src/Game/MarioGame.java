@@ -1,3 +1,7 @@
+package Game;
+
+import java.util.Random;
+
 public class MarioGame {
     private int score;
 
@@ -5,10 +9,18 @@ public class MarioGame {
 
     public MarioGame() {
         this.score = 0;
+        this.marioState = new Small(this);
     }
 
     public void takeMysteryBox() {
+        Random random = new Random();
 
+        switch (random.nextInt(4)) {
+            case 0 -> takeFlower();
+            case 1 -> takeMushroom();
+            case 2 -> takeFeather();
+            case 3 -> takeDamage();
+        }
     }
 
     public void takeFlower() {
@@ -43,7 +55,15 @@ public class MarioGame {
         return score;
     }
 
+    public MarioState getMarioState() {
+        return marioState;
+    }
+
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public void setMarioState(MarioState marioState) {
+        this.marioState = marioState;
     }
 }

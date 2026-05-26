@@ -1,7 +1,9 @@
-class Fire implements MarioState {
+package Game;
+
+class Dead implements MarioState {
     private MarioGame marioGame;
 
-    public Fire(MarioGame marioGame) {
+    public Dead(MarioGame marioGame) {
         this.marioGame = marioGame;
     }
 

@@ -1,3 +1,5 @@
+package Game;
+
 class Cape implements MarioState {
     private MarioGame marioGame;
 
